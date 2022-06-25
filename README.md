@@ -1,10 +1,19 @@
-# Teach AI To Play Snake! Reinforcement Learning With PyTorch and Pygame
+# Snake game using reinforcement learning with PyTorch and Pygame
 
-In this Python Reinforcement Learning Tutorial series we teach an AI to play Snake! We build everything from scratch using Pygame and PyTorch. The tutorial consists of 4 parts:
+In our project we used a ready python game and reinforcement learning solution which can be found here:
+https://www.youtube.com/playlist?list=PLqnslRFeH2UrDh7vUmJ60YrmWd64mTTKV
 
-You can find all tutorials on my channel: [Playlist](https://www.youtube.com/playlist?list=PLqnslRFeH2UrDh7vUmJ60YrmWd64mTTKV)
+As part of the project, we modified the program and added the following features:
+- possibility to read and use an already trained model
+- modified reinforcement learning algorithm (snake monitors area around him/monitors whole game board)
+- added poissoned apples which should be dodged by the snake.
+- 
+The modified algorithm failed to learn how to play the game. We are not sure what is the reason for this. There are many learning features, so the final deep neural network is much more complex. We continued the learning process overnight, but could not achieve a score higher than 3. 
 
-- Part 1: I'll show you the project and teach you some basics about Reinforcement Learning and Deep Q Learning.
-- Part 2: Learn how to setup the environment and implement the Snake game.
-- Part 3: Implement the agent that controls the game.
-- Part 4: Implement the neural network to predict the moves and train it.
+## Example learning processes of the model modified to observe its neighborhood:
+<img width="624" alt="Zrzut ekranu 2022-06-12 o 14 23 01" src="https://user-images.githubusercontent.com/56223666/175788794-1d043316-ddce-46a1-b03b-546a524b8434.png">
+
+## Example learning processes of the model modified to observe whole game board:
+<img width="598" alt="Zrzut ekranu 2022-06-11 o 16 22 28" src="https://user-images.githubusercontent.com/56223666/175788789-fb9e7f0a-d64c-4b20-996b-0ef27bb009af.png">
+
+On the other hand, the model has learned to avoid poisoned apples, and preloaded models are able to achieve high scores much earlier than those trained from scratch
