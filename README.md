@@ -7,7 +7,8 @@ As part of the project, we modified the program and added the following features
 - possibility to read and use an already trained model
 - modified reinforcement learning algorithm (snake monitors area around him/monitors whole game board)
 - added poissoned apples which should be dodged by the snake.
-- 
+
+Previously the NN input-state was created as an eleven-element-list containing information about [current snake direction combined with information about possible colisions for each direction, current snake direction, current food position]. The algorithm upgrade used information about snake neighboring fields within a particular range (if there is a colision or not). 
 The modified algorithm failed to learn how to play the game. We are not sure what is the reason for this. There are many learning features, so the final deep neural network is much more complex. We continued the learning process overnight, but could not achieve a score higher than 3. 
 
 ## Example learning processes of the model modified to observe its neighborhood:
